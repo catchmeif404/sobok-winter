@@ -8,7 +8,7 @@ import { createHeroScene } from './hero-scene';
 import { Locale, initLocale, locale, setLocale } from './i18n';
 import { createMenu } from './menu';
 import { createSnowPile } from './snow-pile';
-import { createFlake, drawFlake } from './snowflake';
+import { createStoryScene } from './story-scene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,32 +50,8 @@ gsap.from('.hint', { opacity: 0, duration: 1, delay: 1.4 });
 const windowHint = $<HTMLElement>('.window-hint');
 createFrostWindow($<HTMLCanvasElement>('.frost'), () => gsap.to(windowHint, { opacity: 0, y: 10, duration: 0.5 }));
 
-// Story: the pinned canvas grows one snowflake as you scroll; each step lights up in turn.
-const storyCanvas = $<HTMLCanvasElement>('.story-canvas');
-const storyContext = storyCanvas.getContext('2d');
-if (storyContext === null) throw new Error('2D canvas is unavailable.');
-const storyShape = createFlake(20261223);
-const storySize = 900;
-storyCanvas.width = storySize;
-storyCanvas.height = storySize;
-const steps = [...document.querySelectorAll<HTMLElement>('.step')];
-const meter = $<HTMLElement>('.story-meter span');
-const renderStory = (progress: number): void => {
-  drawFlake(storyContext, storyShape, storySize, { growth: 0.04 + progress * 0.96, color: '#0e1a36', glow: 'rgba(120, 170, 230, 0.6)' });
-  const active = Math.min(steps.length - 1, Math.floor(progress * steps.length));
-  steps.forEach((step, index) => step.classList.toggle('is-active', index === active));
-  meter.style.transform = `scaleY(${progress})`;
-};
-renderStory(0);
-ScrollTrigger.create({
-  trigger: '.story',
-  start: 'top top',
-  end: '+=220%',
-  pin: '.story-pin',
-  scrub: 0.6,
-  onUpdate: ({ progress }) => renderStory(progress),
-});
-gsap.to(storyCanvas, { rotate: 60, ease: 'none', scrollTrigger: { trigger: '.story', start: 'top top', end: '+=220%', scrub: 1 } });
+// Story: how a bowl of bingsu is made, scrubbed by scroll.
+createStoryScene($<HTMLElement>('.story'), $<HTMLElement>('.story-pin'));
 
 // Section reveals.
 document.querySelectorAll<HTMLElement>('.reveal').forEach((element) => {
