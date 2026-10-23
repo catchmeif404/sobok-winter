@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>소복 SOBOK — 첫눈 오는 날의 디저트</title>
+    <meta name="description" content="첫눈 오는 날에만 문을 여는 가상 디저트 가게 소복의 인터랙티브 샘플 홈페이지." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Fraunces:ital,opsz,wght@1,9..144,600&display=swap" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo" href="#top" aria-label="SOBOK">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flake" /></svg>
+        <span>소복</span><em>SOBOK</em>
+      </a>
+      <nav class="nav">
+        <a href="#menu" data-i18n="nav.menu">메뉴</a>
+        <a href="#story" data-i18n="nav.story">이야기</a>
+        <a href="#visit" data-i18n="nav.visit">오시는 길</a>
+        <button class="lang" type="button" data-i18n="lang.toggle">EN</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-word" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">겨울 디저트 하우스</p>
+          <p class="hero-lead" data-i18n="hero.lead">첫눈 오는 날에만 문을 여는 작은 디저트 가게, 소복입니다.</p>
+        </div>
+        <button class="flake-hit" type="button" aria-label="새 눈꽃 만들기"></button>
+        <div class="serial">
+          <span class="serial-label" data-i18n="hero.serial">오늘의 눈꽃</span>
+          <strong class="serial-number">No. 000000</strong>
+          <span class="serial-note" data-i18n="hero.unique">같은 눈꽃은 두 번 내리지 않아요</span>
+        </div>
+        <p class="hint"><span class="hint-dot"></span><span data-i18n="hero.hint">눈꽃을 눌러 보세요</span></p>
+      </section>
+
+      <section class="window-section" id="window">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="window.eyebrow">성에 낀 창문</p>
+          <h2 class="title" data-i18n="window.title">안쪽이 궁금하다면,
+창문을 문질러 보세요</h2>
+        </div>
+        <div class="window reveal">
+          <div class="window-scene">
+            <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <radialGradient id="warm" cx="50%" cy="45%" r="75%">
+                  <stop offset="0" stop-color="#ffcf8a" />
+                  <stop offset="0.45" stop-color="#e98a4f" />
+                  <stop offset="1" stop-color="#5a2a2a" />
+                </radialGradient>
+                <filter id="bokeh"><feGaussianBlur stdDeviation="6" /></filter>
+                <filter id="steam"><feGaussianBlur stdDeviation="3" /></filter>
+                <linearGradient id="counter" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#6b3b2a" />
+                  <stop offset="1" stop-color="#3a1d16" />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="700" fill="url(#warm)" />
+              <g class="bokeh" filter="url(#bokeh)" opacity="0.9">
+                <path d="M0 90 Q300 170 600 110 T1200 120" stroke="#ffe9b8" stroke-width="2" fill="none" opacity="0.5" />
+                <circle cx="80" cy="118" r="14" fill="#fff3c4" /><circle cx="210" cy="140" r="11" fill="#ffd27a" />
+                <circle cx="350" cy="148" r="15" fill="#fff3c4" /><circle cx="480" cy="128" r="10" fill="#ffd27a" />
+                <circle cx="620" cy="110" r="14" fill="#fff3c4" /><circle cx="760" cy="118" r="11" fill="#ffd27a" />
+                <circle cx="900" cy="128" r="15" fill="#fff3c4" /><circle cx="1040" cy="124" r="11" fill="#ffd27a" />
+                <circle cx="1150" cy="120" r="13" fill="#fff3c4" />
+              </g>
+              <rect x="0" y="470" width="1200" height="230" fill="url(#counter)" />
+              <rect x="0" y="462" width="1200" height="14" fill="#8a5038" />
+              <!-- cake stand -->
+              <g transform="translate(300 300)">
+                <ellipse cx="0" cy="162" rx="120" ry="14" fill="#2b130e" opacity="0.5" />
+                <rect x="-8" y="110" width="16" height="50" fill="#f3e6da" />
+                <ellipse cx="0" cy="110" rx="110" ry="14" fill="#fff6ec" />
+                <path d="M-80 108 L-80 40 Q-80 20 -60 20 L60 20 Q80 20 80 40 L80 108 Z" fill="#fffaf3" />
+                <path d="M-80 52 Q-60 64 -40 52 T0 52 T40 52 T80 52 L80 66 L-80 66 Z" fill="#f2b8b3" />
+                <path d="M-84 24 Q-60 -2 -30 14 Q0 -6 30 14 Q60 -2 84 24 Q60 30 0 26 Q-60 30 -84 24Z" fill="#ffffff" />
+                <path d="M-14 -6 Q-2 -26 12 -8 Q14 6 0 8 Q-14 6 -14 -6Z" fill="#e2414f" />
+                <path d="M-2 -20 L0 -30 L4 -20" stroke="#3c7d3a" stroke-width="3" fill="none" />
+                <path d="M36 0 Q46 -16 58 -2 Q58 10 46 10 Q36 10 36 0Z" fill="#e2414f" />
+                <path d="M-56 2 Q-46 -14 -34 0 Q-34 12 -46 12 Q-56 12 -56 2Z" fill="#e2414f" />
+              </g>
+              <!-- cup -->
+              <g transform="translate(820 360)">
+                <g class="steam" filter="url(#steam)" stroke="#ffffff" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.6">
+                  <path d="M-20 -30 Q-40 -60 -20 -90 T-20 -150" />
+                  <path d="M10 -30 Q-10 -70 12 -100 T8 -160" />
+                  <path d="M38 -30 Q20 -60 40 -92 T36 -140" />
+                </g>
+                <ellipse cx="10" cy="104" rx="100" ry="12" fill="#2b130e" opacity="0.45" />
+                <path d="M-60 0 L80 0 L68 92 Q66 102 54 102 L-34 102 Q-46 102 -48 92 Z" fill="#fdf7ef" />
+                <path d="M80 18 Q120 18 118 48 Q116 74 72 72" stroke="#fdf7ef" stroke-width="12" fill="none" />
+                <ellipse cx="10" cy="0" rx="70" ry="12" fill="#b5784d" />
+                <g transform="translate(10 0) scale(0.32 0.1)" stroke="#fff6e8" stroke-width="10" stroke-linecap="round">
+                  <path d="M0 -60 L0 60 M-52 -30 L52 30 M-52 30 L52 -30" />
+                </g>
+              </g>
+            </svg>
+            <div class="open-sign"><span data-i18n="window.sign">영업 중</span></div>
+          </div>
+          <canvas class="frost" aria-label="성에 낀 창문"></canvas>
+          <div class="window-frame" aria-hidden="true"></div>
+          <p class="window-hint" data-i18n="window.hint">드래그해서 성에 닦기</p>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="story-pin">
+          <canvas class="story-canvas" aria-hidden="true"></canvas>
+          <div class="story-meter" aria-hidden="true"><span></span></div>
+          <div class="story-steps">
+            <p class="eyebrow" data-i18n="story.eyebrow">눈꽃이 되기까지</p>
+            <article class="step" data-step="0">
+              <span class="step-no">01</span>
+              <h3 data-i18n="story.step1.title">영하 15도의 구름 속</h3>
+              <p data-i18n="story.step1.body">먼지 한 톨에 물방울이 얼어붙으면서 작은 육각형이 생겨요.</p>
+            </article>
+            <article class="step" data-step="1">
+              <span class="step-no">02</span>
+              <h3 data-i18n="story.step2.title">여섯 갈래로 자라요</h3>
+              <p data-i18n="story.step2.body">떨어지는 동안 온도와 습도가 바뀔 때마다 가지가 하나씩 뻗어 나가요.</p>
+            </article>
+            <article class="step" data-step="2">
+              <span class="step-no">03</span>
+              <h3 data-i18n="story.step3.title">그리고 당신의 접시 위로</h3>
+              <p data-i18n="story.step3.body">그날의 눈처럼, 소복의 디저트도 그날 아침에만 만들어요.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="menu.eyebrow">오늘의 메뉴</p>
+          <h2 class="title" data-i18n="menu.title">눈 오는 날의 단맛</h2>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-frost" aria-hidden="true"></div>
+            <svg class="card-art" viewBox="0 0 200 160" aria-hidden="true">
+              <path d="M30 110 Q100 150 170 110 L156 132 Q100 156 44 132 Z" fill="#e7eef6" stroke="#0e1a36" stroke-width="3" />
+              <path d="M44 110 Q48 40 100 34 Q152 40 156 110 Z" fill="#ffffff" stroke="#0e1a36" stroke-width="3" />
+              <path d="M70 70 Q100 60 130 72" stroke="#c9a46a" stroke-width="6" stroke-linecap="round" fill="none" />
+              <circle cx="100" cy="46" r="10" fill="#f4d9a4" stroke="#0e1a36" stroke-width="3" />
+              <g stroke="#9cc3ea" stroke-width="2"><path d="M60 92 l6 6 M66 92 l-6 6 M132 88 l6 6 M138 88 l-6 6 M98 98 l6 6 M104 98 l-6 6" /></g>
+            </svg>
+            <span class="price">9,500</span>
+            <h3 data-i18n="menu.1.name">첫눈 우유빙수</h3>
+            <p data-i18n="menu.1.desc">얼린 우유를 눈송이처럼 갈아 연유와 볶은 콩가루를 올렸어요.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-frost" aria-hidden="true"></div>
+            <svg class="card-art" viewBox="0 0 200 160" aria-hidden="true">
+              <path d="M40 132 L160 132 L160 72 L40 72 Z" fill="#fffaf3" stroke="#0e1a36" stroke-width="3" />
+              <path d="M40 96 Q60 106 80 96 T120 96 T160 96 L160 108 L40 108 Z" fill="#f2b8b3" stroke="#0e1a36" stroke-width="3" />
+              <path d="M34 74 Q60 50 86 66 Q110 48 134 66 Q156 52 166 74 Q100 82 34 74Z" fill="#ffffff" stroke="#0e1a36" stroke-width="3" />
+              <path d="M88 52 Q100 26 114 50 Q116 66 100 66 Q86 66 88 52Z" fill="#e2414f" stroke="#0e1a36" stroke-width="3" />
+              <path d="M96 34 L100 22 L106 34" stroke="#3c7d3a" stroke-width="4" fill="none" />
+            </svg>
+            <span class="price">7,800</span>
+            <h3 data-i18n="menu.2.name">딸기 소복 케이크</h3>
+            <p data-i18n="menu.2.desc">설향 딸기와 가벼운 생크림을 눈 쌓이듯 겹겹이.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-frost" aria-hidden="true"></div>
+            <svg class="card-art" viewBox="0 0 200 160" aria-hidden="true">
+              <path d="M50 60 L150 60 L140 136 Q138 144 128 144 L72 144 Q62 144 60 136 Z" fill="#fdf7ef" stroke="#0e1a36" stroke-width="3" />
+              <path d="M150 74 Q180 74 178 98 Q176 120 144 118" stroke="#0e1a36" stroke-width="3" fill="none" />
+              <ellipse cx="100" cy="60" rx="50" ry="10" fill="#b5784d" stroke="#0e1a36" stroke-width="3" />
+              <g transform="translate(100 60) scale(1 0.28)" stroke="#fff6e8" stroke-width="5" stroke-linecap="round"><path d="M0 -30 L0 30 M-26 -15 L26 15 M-26 15 L26 -15" /></g>
+              <g stroke="#9cc3ea" stroke-width="3" stroke-linecap="round" fill="none"><path d="M80 44 Q74 30 82 18" /><path d="M118 44 Q124 30 116 16" /></g>
+            </svg>
+            <span class="price">6,200</span>
+            <h3 data-i18n="menu.3.name">호지차 눈꽃 라떼</h3>
+            <p data-i18n="menu.3.desc">구운 녹차 향 위로 우유 거품 눈꽃을 그려 드려요.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="visit-copy reveal">
+          <p class="eyebrow" data-i18n="visit.eyebrow">영업 안내</p>
+          <h2 class="title" data-i18n="visit.title">첫눈 예보가 뜨면
+문을 엽니다</h2>
+          <p class="visit-body" data-i18n="visit.body">기상청 첫눈 예보가 나오는 날 아침, 이 페이지와 인스타그램으로 알려 드려요.</p>
+          <dl class="facts">
+            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-pin" /></svg></dt><dd data-i18n="visit.address">서울 어딘가, 골목 끝 하얀 문</dd></div>
+            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-clock" /></svg></dt><dd data-i18n="visit.hours">첫눈 오는 날 11:00 – 눈이 그칠 때까지</dd></div>
+          </dl>
+        </div>
+        <div class="gauge reveal">
+          <svg viewBox="0 0 220 220" aria-hidden="true">
+            <circle cx="110" cy="110" r="92" class="gauge-track" />
+            <circle cx="110" cy="110" r="92" class="gauge-fill" />
+          </svg>
+          <div class="gauge-text">
+            <strong class="gauge-value">0%</strong>
+            <span data-i18n="visit.chance">이번 주 눈 소식 확률</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <canvas class="pile" aria-hidden="true"></canvas>
+      <div class="footer-copy">
+        <p class="footer-line" data-i18n="footer.line">소복소복, 오늘도 쌓이는 중</p>
+        <p class="footer-credit"><span data-i18n="footer.credit">이 사이트는 홈페이지 제작 예시로 만든 가상 브랜드입니다.</span></p>
+      </div>
+    </footer>
+
+    <a class="badge" href="#visit" aria-label="예약 문의">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="badge-circle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0" /></defs>
+        <text><textPath href="#badge-circle" class="badge-text"><tspan data-i18n="badge">예약 문의 · RESERVE · </tspan><tspan data-i18n="badge">예약 문의 · RESERVE · </tspan></textPath></text>
+      </svg>
+      <svg class="badge-core" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flake" /></svg>
+    </a>
+
+    <p class="sample-tag" data-i18n="sample.notice">가상 브랜드 · 샘플 사이트</p>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="icon-flake" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7" />
+          <path d="M12 5l-2-2M12 5l2-2M12 19l-2 2M12 19l2 2M5.6 8.3l-2.7.5M5.6 8.3l-.8-2.6M18.4 15.7l2.7-.5M18.4 15.7l.8 2.6M5.6 15.7l-.8 2.6M5.6 15.7l-2.7-.5M18.4 8.3l.8-2.6M18.4 8.3l2.7.5" />
+        </g>
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" /></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></symbol>
+    </svg>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
