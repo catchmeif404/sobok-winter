@@ -55,7 +55,7 @@ svg { display: block; }
   color: var(--snow);
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1), background 0.4s, color 0.4s, backdrop-filter 0.4s;
 }
-.topbar.is-solid { background: rgba(10, 20, 48, 0.55); backdrop-filter: blur(14px); }
+.topbar.is-solid { background: rgba(10, 20, 48, 0.86); backdrop-filter: blur(14px); }
 .topbar.is-hidden { transform: translateY(-110%); }
 .logo { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 22px; }
 .logo svg { width: 26px; height: 26px; }
