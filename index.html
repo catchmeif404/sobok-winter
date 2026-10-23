@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>소복 SOBOK — 첫눈 오는 날의 디저트</title>
-    <meta name="description" content="첫눈 오는 날에만 문을 여는 가상 디저트 가게 소복의 인터랙티브 샘플 홈페이지." />
+    <title>소복 SOBOK — 겨울 디저트 하우스</title>
+    <meta name="description" content="겨울 디저트 하우스 소복(가상 브랜드)의 인터랙티브 샘플 홈페이지." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,17 +29,7 @@
     <main id="top">
       <section class="hero">
         <canvas class="hero-canvas" aria-hidden="true"></canvas>
-        <div class="hero-word" aria-hidden="true"></div>
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">겨울 디저트 하우스</p>
-          <p class="hero-lead" data-i18n="hero.lead">첫눈 오는 날에만 문을 여는 작은 디저트 가게, 소복입니다.</p>
-        </div>
         <button class="flake-hit" type="button" aria-label="새 눈꽃 만들기"></button>
-        <div class="serial">
-          <span class="serial-label" data-i18n="hero.serial">오늘의 눈꽃</span>
-          <strong class="serial-number">No. 000000</strong>
-          <span class="serial-note" data-i18n="hero.unique">같은 눈꽃은 두 번 내리지 않아요</span>
-        </div>
         <p class="hint"><span class="hint-dot"></span><span data-i18n="hero.hint">눈꽃을 눌러 보세요</span></p>
       </section>
 
@@ -140,72 +130,51 @@
 
       <section class="menu" id="menu">
         <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="menu.eyebrow">오늘의 메뉴</p>
-          <h2 class="title" data-i18n="menu.title">눈 오는 날의 단맛</h2>
+          <p class="eyebrow" data-i18n="menu.eyebrow">Menu</p>
+          <h2 class="title" data-i18n="menu.title">메뉴</h2>
         </div>
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card-frost" aria-hidden="true"></div>
-            <svg class="card-art" viewBox="0 0 200 160" aria-hidden="true">
-              <path d="M30 110 Q100 150 170 110 L156 132 Q100 156 44 132 Z" fill="#e7eef6" stroke="#0e1a36" stroke-width="3" />
-              <path d="M44 110 Q48 40 100 34 Q152 40 156 110 Z" fill="#ffffff" stroke="#0e1a36" stroke-width="3" />
-              <path d="M70 70 Q100 60 130 72" stroke="#c9a46a" stroke-width="6" stroke-linecap="round" fill="none" />
-              <circle cx="100" cy="46" r="10" fill="#f4d9a4" stroke="#0e1a36" stroke-width="3" />
-              <g stroke="#9cc3ea" stroke-width="2"><path d="M60 92 l6 6 M66 92 l-6 6 M132 88 l6 6 M138 88 l-6 6 M98 98 l6 6 M104 98 l-6 6" /></g>
-            </svg>
-            <span class="price">9,500</span>
-            <h3 data-i18n="menu.1.name">첫눈 우유빙수</h3>
-            <p data-i18n="menu.1.desc">얼린 우유를 눈송이처럼 갈아 연유와 볶은 콩가루를 올렸어요.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-frost" aria-hidden="true"></div>
-            <svg class="card-art" viewBox="0 0 200 160" aria-hidden="true">
-              <path d="M40 132 L160 132 L160 72 L40 72 Z" fill="#fffaf3" stroke="#0e1a36" stroke-width="3" />
-              <path d="M40 96 Q60 106 80 96 T120 96 T160 96 L160 108 L40 108 Z" fill="#f2b8b3" stroke="#0e1a36" stroke-width="3" />
-              <path d="M34 74 Q60 50 86 66 Q110 48 134 66 Q156 52 166 74 Q100 82 34 74Z" fill="#ffffff" stroke="#0e1a36" stroke-width="3" />
-              <path d="M88 52 Q100 26 114 50 Q116 66 100 66 Q86 66 88 52Z" fill="#e2414f" stroke="#0e1a36" stroke-width="3" />
-              <path d="M96 34 L100 22 L106 34" stroke="#3c7d3a" stroke-width="4" fill="none" />
-            </svg>
-            <span class="price">7,800</span>
-            <h3 data-i18n="menu.2.name">딸기 소복 케이크</h3>
-            <p data-i18n="menu.2.desc">설향 딸기와 가벼운 생크림을 눈 쌓이듯 겹겹이.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-frost" aria-hidden="true"></div>
-            <svg class="card-art" viewBox="0 0 200 160" aria-hidden="true">
-              <path d="M50 60 L150 60 L140 136 Q138 144 128 144 L72 144 Q62 144 60 136 Z" fill="#fdf7ef" stroke="#0e1a36" stroke-width="3" />
-              <path d="M150 74 Q180 74 178 98 Q176 120 144 118" stroke="#0e1a36" stroke-width="3" fill="none" />
-              <ellipse cx="100" cy="60" rx="50" ry="10" fill="#b5784d" stroke="#0e1a36" stroke-width="3" />
-              <g transform="translate(100 60) scale(1 0.28)" stroke="#fff6e8" stroke-width="5" stroke-linecap="round"><path d="M0 -30 L0 30 M-26 -15 L26 15 M-26 15 L26 -15" /></g>
-              <g stroke="#9cc3ea" stroke-width="3" stroke-linecap="round" fill="none"><path d="M80 44 Q74 30 82 18" /><path d="M118 44 Q124 30 116 16" /></g>
-            </svg>
-            <span class="price">6,200</span>
-            <h3 data-i18n="menu.3.name">호지차 눈꽃 라떼</h3>
-            <p data-i18n="menu.3.desc">구운 녹차 향 위로 우유 거품 눈꽃을 그려 드려요.</p>
-          </article>
+        <div class="menu-board reveal">
+          <div class="menu-tabs" role="tablist"></div>
+          <div class="menu-list"></div>
+          <p class="menu-note" data-i18n="menu.note">시즌 메뉴는 재료가 떨어지면 일찍 마감될 수 있어요. 가격은 부가세 포함입니다.</p>
         </div>
       </section>
 
       <section class="visit" id="visit">
         <div class="visit-copy reveal">
-          <p class="eyebrow" data-i18n="visit.eyebrow">영업 안내</p>
-          <h2 class="title" data-i18n="visit.title">첫눈 예보가 뜨면
-문을 엽니다</h2>
-          <p class="visit-body" data-i18n="visit.body">기상청 첫눈 예보가 나오는 날 아침, 이 페이지와 인스타그램으로 알려 드려요.</p>
+          <p class="eyebrow" data-i18n="visit.eyebrow">Visit</p>
+          <h2 class="title" data-i18n="visit.title">영업시간 · 오시는 길</h2>
+          <table class="hours">
+            <tr><th data-i18n="visit.days1">화 – 금</th><td data-i18n="visit.time1">12:00 – 21:00</td></tr>
+            <tr><th data-i18n="visit.days2">토 · 일</th><td data-i18n="visit.time2">11:00 – 21:00</td></tr>
+            <tr><th data-i18n="visit.days3">월요일</th><td data-i18n="visit.time3">정기 휴무</td></tr>
+            <tr><th data-i18n="visit.lastOrderLabel">라스트 오더</th><td data-i18n="visit.lastOrder">20:30</td></tr>
+          </table>
           <dl class="facts">
-            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-pin" /></svg></dt><dd data-i18n="visit.address">서울 어딘가, 골목 끝 하얀 문</dd></div>
-            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-clock" /></svg></dt><dd data-i18n="visit.hours">첫눈 오는 날 11:00 – 눈이 그칠 때까지</dd></div>
+            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-pin" /></svg></dt><dd data-i18n="visit.address">서울 마포구 소복길 12, 1층</dd></div>
+            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-phone" /></svg></dt><dd data-i18n="visit.phone">02-000-0000</dd></div>
+            <div><dt><svg viewBox="0 0 24 24"><use href="#icon-car" /></svg></dt><dd data-i18n="visit.parking">건물 뒤 2대 주차 가능</dd></div>
           </dl>
         </div>
-        <div class="gauge reveal">
-          <svg viewBox="0 0 220 220" aria-hidden="true">
-            <circle cx="110" cy="110" r="92" class="gauge-track" />
-            <circle cx="110" cy="110" r="92" class="gauge-fill" />
+        <div class="map reveal" aria-hidden="true">
+          <svg viewBox="0 0 480 400">
+            <rect width="480" height="400" rx="26" fill="#13224a" />
+            <path d="M-10 290 C 120 250, 220 330, 490 280" stroke="#1f3c72" stroke-width="44" fill="none" />
+            <g stroke="#2a3c6b" stroke-width="16" stroke-linecap="round">
+              <path d="M40 -10 L120 410" /><path d="M300 -10 L260 410" /><path d="M-10 120 L490 90" /><path d="M-10 200 L490 190" />
+            </g>
+            <g stroke="#22335f" stroke-width="7" stroke-linecap="round">
+              <path d="M180 -10 L170 410" /><path d="M400 -10 L380 410" /><path d="M-10 40 L490 30" />
+            </g>
+            <g fill="#1a2b55"><rect x="190" y="110" width="58" height="66" rx="6" /><rect x="320" y="104" width="54" height="72" rx="6" /><rect x="60" y="134" width="40" height="52" rx="6" /><rect x="410" y="200" width="50" height="60" rx="6" /></g>
+            <text x="300" y="320" fill="#5f7fbf" font-size="14" font-family="Pretendard Variable, sans-serif">소복천</text>
+            <g class="map-pin" transform="translate(276 150)">
+              <circle r="30" fill="#e2414f" opacity="0.25" class="map-pulse" />
+              <path d="M0 14 C -18 -4, -18 -30, 0 -30 C 18 -30, 18 -4, 0 14 Z" fill="#e2414f" />
+              <circle cy="-17" r="6" fill="#fff" />
+            </g>
+            <g transform="translate(300 116)"><rect width="74" height="30" rx="15" fill="#ffffff" /><text x="37" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#0e1a36" font-family="Gowun Batang, serif">소복</text></g>
           </svg>
-          <div class="gauge-text">
-            <strong class="gauge-value">0%</strong>
-            <span data-i18n="visit.chance">이번 주 눈 소식 확률</span>
-          </div>
         </div>
       </section>
     </main>
@@ -237,6 +206,8 @@
       </symbol>
       <symbol id="icon-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" /></symbol>
       <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" /></symbol>
+      <symbol id="icon-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 16v-4l2-5h12l2 5v4H4zM4 16v2M20 16v2" /><circle cx="8" cy="13.5" r="1" fill="currentColor" /><circle cx="16" cy="13.5" r="1" fill="currentColor" /></symbol>
     </svg>
 
     <script type="module" src="/src/main.ts"></script>
