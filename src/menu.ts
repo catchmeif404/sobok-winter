@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { Locale, locale, onLocaleChange } from './i18n';
+import { loadSheetMenu } from './menu-sheet';
 
 export enum MenuCategory {
   All = 'all',
@@ -17,7 +18,7 @@ export enum MenuBadge {
 
 type Localized = Record<Locale, string>;
 
-interface MenuItem {
+export interface MenuItem {
   category: Exclude<MenuCategory, MenuCategory.All>;
   name: Localized;
   description: Localized;
@@ -39,7 +40,7 @@ const badgeLabels: Record<MenuBadge, Localized> = {
   [MenuBadge.New]: { [Locale.Ko]: 'NEW', [Locale.En]: 'NEW' },
 };
 
-const items: MenuItem[] = [
+let items: MenuItem[] = [
   {
     category: MenuCategory.Bingsu, price: 9500, badge: MenuBadge.Best,
     name: { [Locale.Ko]: '우유 눈꽃빙수', [Locale.En]: 'Milk snowflake bingsu' },
@@ -157,6 +158,11 @@ export const createMenu = (tabs: HTMLElement, list: HTMLElement): void => {
 
   renderTabs();
   renderList(false);
+  void loadSheetMenu().then((sheetItems) => {
+    if (!sheetItems) return;
+    items = sheetItems;
+    renderList(false);
+  });
   onLocaleChange(() => {
     renderTabs();
     renderList(false);
